@@ -1,17 +1,29 @@
----
-layout: default
-title: "Home"
----
-<link rel="preload" as="image" href="{{ site.baseurl }}/assets/btn-github-hover.png">
-<link rel="preload" as="image" href="{{ site.baseurl }}/assets/btn-patreon-hover.png">
-
-<div class="guibox center">
-	soporte para las versiones 1.19.4 a 1.20.4 y Bedrock con el puerto 8268.
-</div>
-<div class="guibox center">
-	<div class="button-list">
-		<a class="minecraft-button center" href="{{ site.baseurl }}/join">Como unirse</a>
-		<a class="minecraft-button center" href="{{ site.baseurl }}/rules">Reglas del servidor</a>
-		<a class="minecraft-button center" href="{{ site.baseurl }}/faq">Preguntas frecuentes</a>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+		<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    </head>
+    <body>
+	<audio id="music">
+		<source src="assets/menu2.ogg" type="audio/ogg">
+	</audio>
+	<audio id="click">
+		<source src="assets/click.ogg" type="audio/ogg">
+	</audio>
+	<div class="scroll">
+        <div class="guibox center supercenter" style="margin-top: 2em; width: 60%; font-size: 0.75em;">
+			<p class="lem-header">626 Family Server</p>
+                626 Family es un servidor de Minecraft Java y Bedrock<sup><span title="626 Family Server" style="text-decoration: underline #000 dotted; cursor: help;"\></sup> 
+				El servidor tiene soporte para las versiones 1.19.4 a 1.20.4 de Minecraft Java<br>
+            <a href="rules/index.html">Reglas del Servidor</a> / <a href="bedrock/index.html">¿Como me uno con bedrock?</a><br>
+            <img src="assets/btn-youtube.png" style="height: 80px" class="btn" onmouseover="this.src='assets/btn-youtube-hover.png'" onmouseout="this.src='assets/btn-youtube.png'" onclick="window.open(`https://www.youtube.com/channel/UCWHC9AKgYS_A9ezCYThgRiQ`, '_blank').focus();"> <img src="assets/btn-twitter.png" onmouseover="this.src='assets/btn-twitter-hover.png'" onmouseout="this.src='assets/btn-twitter.png'" onclick="window.open(`https://twitter.com/626FamilyServer`, '_blank').focus();" style="height: 80px" class="btn">
+		</div>
+		<div class="guibox center supercenter" style="margin-top: 1em; width: 60%; font-size: 0.75em;">
+			<b><span id="easter-egg" onclick="easterEgg()">Survival:</span></b> play.626s.online<br>
+            <b>Batalla Legacy:</b> legacy.626s.online <span style="color: #ff5555">(Cerrado)</span><br>
+            <b>Anarquico:</b> anarchy.626s.online <span style="color: #ff5555">(Cerrado)</span><br>
+		</div>
 	</div>
-</div>
+    </body>
+    <script src="script.js"></script>
+</html>
