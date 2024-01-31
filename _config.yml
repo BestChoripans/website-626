@@ -18,15 +18,15 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Legacy Edition Minigames
+title: BestChoripans Website
 description: >- # this means to ignore newlines until "baseurl:"
   LEM is a set of open source LCE? mini game remakes!
   These are meant to be used in Minecraft: Java Edition!
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.legacyminigames.net" # the base hostname & protocol for your site, e.g. http://example.com
-pmc_username: Derpbox
-patreon_username: DBTDerpbox
-github_username:  Legacy-Edition-Minigames
+url: "https://enderfer.online" # the base hostname & protocol for your site, e.g. http://example.com
+pmc_username: BestChoripans
+patreon_username: BestChoripans
+github_username:  BestChoripans
 
 # Build settings
 theme: minima
