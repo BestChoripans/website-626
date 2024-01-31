@@ -6,7 +6,7 @@ function easterEgg() {
 		easterEggClicks++;
 		document.getElementById("music").loop = true;
 		document.getElementById("music").play();
-		document.getElementById("easter-egg").setAttribute("style","color: #fe44d1");
+		document.getElementById("easter-egg").setAttribute("style","color: #ffffff");
 	} else {
 		if (easterEggClicks < 1) {
 			document.getElementById("click").play();
