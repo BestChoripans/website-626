@@ -8,7 +8,7 @@ function easterEgg() {
 		document.getElementById("music").play();
 		document.getElementById("easter-egg").setAttribute("style","color: #fe44d1");
 	} else {
-		if (easterEggClicks < 3) {
+		if (easterEggClicks < 1) {
 			document.getElementById("click").play();
 		}
 		easterEggClicks++;
