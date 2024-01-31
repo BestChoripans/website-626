@@ -14,15 +14,6 @@ function recargarScripts() {
     });
 }
 
-function recargarContenido() {
-    fetch('nuevo_contenido.html?' + evitarCache)
-        .then(response => response.text())
-        .then(html => {
-            document.body.innerHTML = html;
-        })
-        .catch(error => console.error('Error al cargar el nuevo contenido:', error));
-}
-
 function recargarAssets() {
     const imagen = document.createElement('img');
     imagen.src = 'logo.png?' + evitarCache;
