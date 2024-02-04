@@ -1,0 +1,2 @@
+<span style="color: #4eea6d">(Abierto)</span>
+<span style="color: #ff5555">(Cerrado)</span>
