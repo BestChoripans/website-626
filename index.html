@@ -3,7 +3,7 @@
         <link rel="stylesheet" href="style.css?v=1.1.2">
 		<link rel="icon" type="image/png" href="/assets/icono.png">
     </head>
-    <body>
+    <body onclick="PlayAudio()">
 	<audio id="click">
 		<source src="assets/click.ogg" type="audio/ogg">
 	</audio>
@@ -15,15 +15,26 @@
 		<br>
 		<br>
 		<div class="button-list">
-			<a class="minecraft-button center" href="htmls/servidores.html?v=1.0" onclick="clickSound()">Servidores</a>
-			<a class="minecraft-button center" href="htmls/reglas.html?v=1.0" onclick="clickSound()">Reglas del servidor</a>
-			<a class="minecraft-button center" href="htmls/bedrock.html?v=1.0" onclick="clickSound()">¿Como me uno con Bedrock?</a>
-			<a class="minecraft-button center" href="htmls/voicechat.html?v=1.0" onclick="clickSound()">¿Como uso el voicechat?</a>
-			<a class="minecraft-button center" href="htmls/batalla.html?v=1.0" onclick="clickSound()">¿Como configuro el modo Batalla?</a>
+			<a class="minecraft-button center" href="javascript:delay('htmls/servidores.html?v=1.1')" onclick="clickSound()">Servidores</a>
+			<a class="minecraft-button center" href="javascript:delay('htmls/reglas.html?v=1.1')" onclick="clickSound()">Reglas del servidor</a>
+			<a class="minecraft-button center" href="javascript:delay('htmls/bedrock.html?v=1.1')" onclick="clickSound()">¿Como me uno con Bedrock?</a>
+			<a class="minecraft-button center" href="javascript:delay('htmls/voicechat.html?v=1.1')" onclick="clickSound()">¿Como uso el voicechat?</a>
+			<a class="minecraft-button center" href="javascript:delay('htmls/batalla.html?v=1.1')" onclick="clickSound()">¿Como configuro el modo Batalla?</a>
 		</div>
+		<audio id="MusicMenu" loop>
+			<source src="assets/menu2.ogg" type="audio/ogg">
+		</audio>
 	</div>
 	</div>
 	</body>
 	<script src="script.js?v=1.0"></script>
+	<script>
+		function PlayAudio() {
+			document.getElementById("MusicMenu").play();
+		}
+		function delay (URL) {
+    		setTimeout( function() { window.location = URL }, 500 );
+		}
+	</script>
 </html>
 

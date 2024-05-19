@@ -3,8 +3,13 @@
         <link rel="stylesheet" href="style2.css">
 		<link rel="icon" type="image/png" href="/assets/icono.png">
     </head>
-    <body>
-        
+    <body onclick="PlayAudio">
+		<audio id="click">
+            <source src="assets/click.ogg" type="audio/ogg">
+	</audio>
+	<audio id="MusicMenu" loop>
+			<source src="assets/menu2.ogg" type="audio/ogg">
+	</audio>
         <!--<div class="panorama"></div>-->
 
 	<div class="scroll">
@@ -35,9 +40,20 @@
 					4. En cuanto a grifeos, robos y demas el equipo de moderacion solo ayuda a jugadores que fueron grifeados por bugs. Todos los jugadores que compartan protección tiene el derecho de modificarla a su gusto, eso recae en ustedes y en no trolearse entre sí, no confíen en cualquiera.<br>
 						 <br>
                 </p>
-				<a href="../index.html">Volver</a><br>
+				<a href="javascript:delay('../index.html')" onclick="clickSound()">Volver</a><br>
         </div>
 	</div>
     </body>
     <script src="script2.js"></script>
+	<script>
+		function PlayAudio() {
+			document.getElementById("MusicMenu").play();
+		}
+		function delay (URL) {
+    		setTimeout( function() { window.location = URL }, 500 );
+		}
+        function clickSound() {
+	        document.getElementById("click").play();
+        }
+	</script>
 </html>

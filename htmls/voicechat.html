@@ -3,8 +3,13 @@
         <link rel="stylesheet" href="style2.css">
 		<link rel="icon" type="image/png" href="/assets/icono.png">
     </head>
-    <body>
-        
+    <body onclick="PlayAudio">
+    <audio id="click">
+            <source src="assets/click.ogg" type="audio/ogg">
+    </audio>
+    <audio id="MusicMenu" loop>
+			<source src="assets/menu2.ogg" type="audio/ogg">
+    </audio>
         <!--<div class="panorama"></div>-->
 	<div class="scroll">
         <div class="guibox center supercenter" style="width: 45%;">
@@ -19,9 +24,20 @@
                 <p style="font-size: 0.5em">Para java primero tendras que escribir el comando "/audio" sin añadir nada simplemente escribes el comando luego te mostrara un mensaje el cual al darle click encima te mandara a una pagina dentro de la pagina te dejaran escoger entre abrir una sesión de audio y una sesión de voicechat <br>
                     la sesión de audio te permitira unicamente escuchar musica en especifico la del spawn pero la sesión de voicechat te permitira escuchar la musica del spawn y hablar y escuchar a las personas de tu alrededor una vez eligas la session te pedira acceso al microfono una vez le des permisos ya podras hablar y escuchar a la gente que tenga voicechat activado<br>
 				</p>
-            <a href="../index.html">Volver</a>
+            <a href="javascript:delay('../index.html')" onclick="clickSound()">Volver</a>
         </div>
 	</div>
     </body>
     <script src="script2.js"></script>
+    <script>
+		function PlayAudio() {
+			document.getElementById("MusicMenu").play();
+		}
+		function delay (URL) {
+    		setTimeout( function() { window.location = URL }, 500 );
+		}
+        function clickSound() {
+	        document.getElementById("click").play();
+        }
+	</script>
 </html>

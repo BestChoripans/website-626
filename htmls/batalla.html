@@ -3,8 +3,10 @@
         <link rel="stylesheet" href="style2.css">
 		<link rel="icon" type="image/png" href="/assets/icono.png">
     </head>
-    <body>
-        
+    <body onclick="PlayAudio">
+        <audio id="click">
+            <source src="assets/click.ogg" type="audio/ogg">
+        </audio>
         <!--<div class="panorama"></div>-->
 	<div class="scroll">
         <div class="guibox center supercenter" style="width: 45%;">
@@ -19,9 +21,23 @@
                 <p style="font-size: 0.5em">Para votar un mapa abre el libro clickea en "[Map Voting]" luego click en "[Base Game]" y selecciona el DLC del mapa que quieras votar los mapas default estan en [Map Pack 0] <br>
                     y en caso de que quieras quitar tu voto presiona la tecla ESC y vuelve a abrir el libro click en [Map Voting] luego en [Remove Vote] y ya habras quitado tu voto<br>
 				</p>
-            <a href="../index.html">Volver</a>
+            <a href="javascript:delay('../index.html')" onclick="clickSound()">Volver</a>
         </div>
 	</div>
+    <audio id="MusicMenu" loop>
+        <source src="assets/menu2.ogg" type="audio/ogg">
+    </audio>
     </body>
     <script src="script2.js"></script>
+    <script> 
+        function PlayAudio() {
+            document.getElementById("MusicMenu").play();
+        }
+        function delay (URL) {
+            setTimeout( function() { window.location = URL }, 500 );
+        }
+        function clickSound() {
+	        document.getElementById("click").play();
+        }
+    </script>
 </html>
